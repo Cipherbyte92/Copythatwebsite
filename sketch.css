@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #ffffff;
+}
+
+.header-container {
+    position: relative;
+    width: 100%;
+}
+
+.top-bar {
+    width: 100%;
+    height: 70px;
+    background-color: #201e1e;
+    display: flex   ;             /* Added to align elements in top bar */
+    align-items: center;        /* Vertically centers the search bar */
+    padding-left: 170px;        /* Prevents overlapping with the Micro_Center logo */
+    box-sizing: border-box;
+}
+
+.Micro_Center {
+    position: absolute;
+    top: -30px;
+    left: 20px;
+    width: 130px;
+    height: 130px;
+    z-index: 10;
+}
+
+.ACER_AD {
+    position: absolute;
+    top: 120px;
+    left: 20px;
+    width: 760px;
+    height: 430px;
+    z-index: 10;
+}
+
+.GPU_AD {
+    position: absolute;
+    top: 120px;
+    left: 810px;
+    width: 416px;
+    height: 430px;
+    z-index: 10;
+}
+
+.Bundle_AD {
+    position: absolute;
+    top: 570px;
+    left: 20px;
+    width: 760px;
+    height: 180px;
+    z-index: 10;
+}
+
+
+/* --- SEARCH BAR STYLES --- */
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 6px;
+    padding: 3px;
+    width: 100%;
+    max-width: 550px;
+    box-sizing: border-box;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 8px 14px;
+    font-size: 15px;
+    color: #333333;
+    width: 100%;
+}
+
+.search-input::placeholder {
+    color: #757575;
+    font-weight: 300;
+}
+
+.search-button {
+    background-color: #0078d4;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 8px 12px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+    flex-shrink: 0;
+}
+
+/* --- SECONDARY NAVIGATION --- */
+
+.secondary-nav {
+  width: 100%;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.secondary-nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.secondary-nav li {
+  display: flex;
+  align-items: center;
+}
+
+/* Adds the Lines in between the Sections of the Navigation Bar (Took me a While to figure it out) */
+.secondary-nav li:not(:last-child)::after {
+  content: "";
+  display: inline-block;
+  height: 24px;
+  width: 1px;
+  background-color: #d8d8d8;
+  margin: 0 4px;
+}
+
+.secondary-nav a {
+  text-decoration: none;
+  color: #111;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 12px;
+  white-space: nowrap;
+}
+
+.secondary-nav a:hover {
+  color: #0066cc;
+}
+
+.secondary-nav .arrow {
+  color: #0066cc;
+  margin-left: 4px;
+  font-size: 14px;
+}
+
+.secondary-nav li.highlight a {
+  color: #0076e0;
+  font-weight: bold;
+}
