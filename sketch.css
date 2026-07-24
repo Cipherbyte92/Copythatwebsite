@@ -14,10 +14,11 @@ body {
     width: 100%;
     height: 70px;
     background-color: #201e1e;
-    display: flex   ;             /* Added to align elements in top bar */
-    align-items: center;        /* Vertically centers the search bar */
-    padding-left: 170px;        /* Prevents overlapping with the Micro_Center logo */
+    display: flex;           
+    align-items: center;      
+    padding-left: 170px;
     box-sizing: border-box;
+    gap: 20px;
 }
 
 .Micro_Center {
@@ -66,8 +67,9 @@ body {
     border-radius: 6px;
     padding: 3px;
     width: 100%;
-    max-width: 550px;
+    max-width: 420px;
     box-sizing: border-box;
+    flex-shrink: 0;
 }
 
 .search-input {
@@ -99,7 +101,61 @@ body {
     flex-shrink: 0;
 }
 
-/* --- SECONDARY NAVIGATION --- */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-action-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    white-space: nowrap;
+}
+
+.action-icon {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.action-text-group {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.action-main-text {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.action-sub-text {
+    font-size: 13px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.action-badge {
+    background-color: #cc0000;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 10px;
+    margin-top: 3px;
+    display: inline-block;
+    width: fit-content;
+}
+
+.arrow-icon {
+    font-size: 10px;
+    margin-left: 2px;
+}
 
 .secondary-nav {
   width: 100%;
@@ -154,4 +210,167 @@ body {
 .secondary-nav li.highlight a {
   color: #0076e0;
   font-weight: bold;
+}
+
+.top-deals-container {
+    position: absolute;
+    top: 570px;
+    left: 810px;
+    width: 416px;
+    z-index: 10;
+    font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.deals-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.deals-header h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #111111;
+    margin: 0;
+}
+
+.deals-header .see-all {
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.deal-card {
+    position: relative;
+    border: 1px solid #e2e2e2;
+    border-radius: 12px;
+    background-color: #ffffff;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.wishlist-btn {
+    position: absolute;
+    top: 14px;
+    left: 110px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    color: #444;
+    font-size: 14px;
+}
+
+.card-body {
+    display: flex;
+    gap: 12px;
+}
+
+.card-image {
+    width: 110px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 20px;
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.card-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.deal-tag {
+    font-size: 13px;
+    color: #333333;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    margin-bottom: 6px;
+}
+
+.item-title {
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 1.25;
+    margin-bottom: 8px;
+}
+
+.item-title:hover {
+    text-decoration: underline;
+}
+
+.rating-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 6px;
+}
+
+.stars {
+    color: #ffb400;
+    font-size: 16px;
+    letter-spacing: -1px;
+}
+
+.rating-score {
+    color: #333333;
+    font-size: 14px;
+}
+
+.rating-score i {
+    font-size: 11px;
+    margin-left: 2px;
+}
+
+.price-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.old-price {
+    color: #cc0000;
+    text-decoration: line-through;
+    font-size: 14px;
+}
+
+.current-price {
+    color: #111111;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cart-button {
+    background-color: #0071e3;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    width: fit-content;
+    margin-bottom: 8px;
+}
+
+.cart-button:hover {
+    background-color: #005bb5;
+}
+
+.availability {
+    color: #111111;
+    font-size: 14px;
 }
